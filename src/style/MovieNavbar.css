@@ -15,6 +15,10 @@
   color: #fff;
 }
 
+.navbar .navbar-collapse .dropdown .dropdown-menu a:focus {
+    background-color: #fff;
+  }
+
 .navbar .form .search {
   background: rgba(255, 252, 252, 0.07);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -61,7 +65,5 @@
     width: 100% !important;
     color: #292929;
   }
-  .navbar .navbar-collapse .dropdown .dropdown-menu a:focus {
-    background-color: #fff;
-  }
+ 
 }
