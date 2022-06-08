@@ -1,0 +1,77 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  background-color: #000;
+  height: 100%;
+}
+
+.genre-item .btn.active {
+  background: linear-gradient(
+    to right,
+    #61aec7,
+    #c70759,
+    rgb(86, 0, 140)
+  ) !important;
+  border-radius: 0;
+  border: none;
+  text-decoration: none;
+}
+.genre-item .btn.active:hover {
+  background: linear-gradient(
+    to right,
+    #8ad0e7,
+    #d2377a,
+    rgb(144, 50, 202)
+  ) !important;
+}
+
+.genre-item .btn {
+  background-color: transparent;
+  border: 1px solid #353535;
+}
+.genre-item .btn:hover {
+  background-color: rgba(255, 252, 252, 0.07);
+  border-image: linear-gradient(to right, #61aec7, #c70759, rgb(86, 0, 140)) 1 !important;
+  border-width: 1px !important;
+  text-decoration: none;
+}
+
+.feature-movie {
+  margin-top: -20px;
+}
+
+.feature-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 47px;
+  border-left: 3px solid;
+  padding-left: 10px;
+  border-image: #fff;
+}
+
+.page-item.active .page-link {
+  background: linear-gradient(
+    to right,
+    #61aec7,
+    #c70759,
+    rgb(86, 0, 140)
+  ) !important;
+  text-decoration: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.pagination .page-item .page-link {
+  background-color: transparent;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #353535;
+}
+.pagination .page-item .page-link:hover {
+  border-image: linear-gradient(to right, #61aec7, #c70759, rgb(86, 0, 140)) 1 !important;
+  background: transparent !important;
+  border-width: 1px !important;
+  text-decoration: none;
+}

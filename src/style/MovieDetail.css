@@ -1,0 +1,148 @@
+.wide-wrapper {
+  background-color: #292929;
+  min-height: 76vh;
+  padding: 20px 10px;
+}
+
+.desc-detail .title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 64px;
+}
+
+.wrapper-poster{
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-poster .poster{
+  width: 100%;
+  height: 100%;
+}
+
+.synopsis{
+  font-size: 14px;
+  line-height: 26px;
+  color: #bbbbbb;
+}
+
+.genre {
+  background-color: #1d1d1d;
+  color: #0feffd;
+  font-size: 14px;
+  border-radius: 0px 8px 0px 8px;
+  background-size: cover;
+  line-height: 16px;
+}
+
+.rating-detail .star-detail {
+  margin-left: -32px;
+}
+
+.rating-detail .overview,
+.rating-detail .actor-title {
+  font-size: 80px;
+}
+
+.wrapper-reviews {
+  margin-top: 80px;
+}
+
+.modal-dialog input:focus, .modal-dialog textarea:focus{
+  border: 1px solid #6c6c6c;
+  box-shadow: none;
+}
+
+.modal-dialog .btn{
+  background-color: #c70759;
+  border: none;
+  font-weight: bold;
+}
+
+.modal-dialog .btn:hover{
+  background-color: #e9438b;
+}
+
+.wrapper-reviews .header-reviews {
+  gap: 280px;
+}
+.wrapper-reviews .header-reviews h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 47px;
+  border-left: 3px solid;
+  padding-left: 10px;
+  border-color:#c70759 !important;
+}
+
+.wrapper-reviews .header-reviews .btn-review {
+  font-size: 18px;
+  background-color: transparent;
+  color: #c70759;
+}
+.wrapper-reviews .header-reviews .btn-review:hover {
+  background-color: #444444;
+}
+
+.wrapper-reviews .review{
+  width: 100%;
+}
+
+.wrapper-reviews .triangle{
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #292929;
+  position: absolute;
+  bottom: -18px;
+
+
+}
+
+.wrapper-reviews .rating-review .star-review {
+  margin-right: -30px;
+}
+
+.wrapper-reviews .like{
+  z-index: 100 !important;
+}
+
+.wrapper-reviews .title-review h3{
+  font-size: 20px;
+}
+
+.wrapper-reviews .desc-review{
+  font-size: 14px;
+  margin-top: -10px;
+  line-height: 26px;
+  color: #bbbbbb;
+}
+
+.wrapper-reviews .author{
+  color: #c70759;
+}
+
+@media only screen and (min-width: 576px) {
+
+.wide-wrapper {
+  background-color: #292929;
+  min-height: 76vh;
+  padding: 20px 160px;
+}
+
+.wrapper-poster{
+  width: 75%;
+  height: 100%;
+}
+
+.wrapper-poster .poster{
+  width: 75%;
+  height: 75%;
+}
+  
+  .wrapper-reviews .review{
+    width: 53%;
+  }
+}
+

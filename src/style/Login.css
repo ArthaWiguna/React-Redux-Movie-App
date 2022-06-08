@@ -1,0 +1,74 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.login-wrapper {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2500' height='750' preserveAspectRatio='none' viewBox='0 0 2500 750'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2715%26quot%3b)' fill='none'%3e%3crect width='2500' height='750' x='0' y='0' fill='url(%23SvgjsLinearGradient2716)'%3e%3c/rect%3e%3cpath d='M2500 0L1487.52 0L2500 213.07z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1487.52 0L2500 213.07L2500 280.07L967.65 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M967.6500000000001 0L2500 280.07L2500 396.3L394.7700000000001 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M394.77 0L2500 396.3L2500 595.62L129.77999999999997 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 750L489.86 750L0 592.0699999999999z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 592.0699999999999L489.86 750L741.15 750L0 485.5899999999999z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 485.59L741.15 750L979.48 750L0 470.39z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 470.39L979.48 750L1563.26 750L0 307.14z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2715'%3e%3crect width='2500' height='750' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='17.5%25' y1='-58.33%25' x2='82.5%25' y2='158.33%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2716'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='0.01'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  min-height: 100vh;
+  width: 100%;
+}
+
+.login-wrapper .login {
+  margin-top: 80px !important;
+  margin: auto;
+}
+
+.login-wrapper .title-login p {
+  color: #bbbbbb;
+}
+
+.login-wrapper .google .google-button {
+  border-image: linear-gradient(to right, #61aec7, #c70759, rgb(86, 0, 140)) 1 !important;
+  border-width: 1px !important;
+  text-decoration: none;
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.login-wrapper .or {
+  color: #bbbbbb;
+}
+.login-wrapper .form-login {
+  background-color: #292929;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  height: 48px;
+}
+
+.login-wrapper .form-login:focus {
+  border: none;
+  box-shadow: none;
+  background-color: #292929;
+  color: #fff;
+}
+
+.login-wrapper .showHide {
+  background-color: #292929;
+  border: none;
+}
+
+.login-wrapper .btn-login {
+  background: linear-gradient(
+    to right,
+    #61aec7,
+    #c70759,
+    rgb(86, 0, 140)
+  ) !important;
+  height: 48px;
+  border: 0;
+  border-radius: 0;
+}
+
+.login-wrapper .btn-login:hover {
+  background: linear-gradient(
+    to right,
+    #8ad0e7,
+    #d2377a,
+    rgb(144, 50, 202)
+  ) !important;
+}
+
+.login-wrapper .login-form .register {
+  color: #bbbbbb !important;
+}
