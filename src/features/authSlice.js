@@ -6,7 +6,7 @@ export const userRegister = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        `http://notflixtv.herokuapp.com/api/v1/users`,
+        `https://notflixtv.herokuapp.com/api/v1/users`,
         data
       );
       console.log(response, "register");
@@ -20,7 +20,7 @@ export const userRegister = createAsyncThunk(
 export const userLogin = createAsyncThunk("auth/userLogin", async (data) => {
   try {
     const response = await axios.post(
-      `http://notflixtv.herokuapp.com/api/v1/users/login`,
+      `https://notflixtv.herokuapp.com/api/v1/users/login`,
       data
     );
     console.log(response, "login");
@@ -33,7 +33,7 @@ export const userLogin = createAsyncThunk("auth/userLogin", async (data) => {
 export const userEdit = createAsyncThunk("auth/userEdit", async (data) => {
   try {
     const response = await axios.put(
-      `http://notflixtv.herokuapp.com/api/v1/users`,
+      `https://notflixtv.herokuapp.com/api/v1/users`,
       data,
       {
         headers: {

@@ -6,7 +6,7 @@ export const fetchAsyncMovies = createAsyncThunk(
   async ({ page, limit, search }) => {
     try {
       const response = await axios.get(
-        `http://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&search=${search}`
+        `https://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&search=${search}`
       );
       // console.log(response.data.data.docs);
       console.log(response);
@@ -22,7 +22,7 @@ export const fetchAsyncMoviesGenre = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        `http://notflixtv.herokuapp.com/api/v1/movies/genres`
+        `https://notflixtv.herokuapp.com/api/v1/movies/genres`
       );
       console.log(response);
       // console.log(response.data.data);
@@ -38,7 +38,7 @@ export const fetchAsyncMovieSelected = createAsyncThunk(
     console.log(page, limit, genre);
     try {
       const response = await axios.get(
-        `http://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&genre=${genre}`
+        `https://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&genre=${genre}`
       );
       // console.log(pageNumber, genre, "ini selected");
       console.log(response);
@@ -54,7 +54,7 @@ export const fetchAsyncSearchMovie = createAsyncThunk(
     console.log(page, limit, search, "fetchAsyncSearch");
     try {
       const response = await axios.get(
-        `http://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&search=${search}`
+        `https://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&search=${search}`
       );
       console.log(response);
       return response.data.data;
@@ -69,7 +69,7 @@ export const fetchAsyncDetailMovie = createAsyncThunk(
   async (id) => {
     try {
       const response = await axios.get(
-        `http://notflixtv.herokuapp.com/api/v1/movies/${id}`
+        `https://notflixtv.herokuapp.com/api/v1/movies/${id}`
       );
       console.log(response, "Detail");
       return response.data.data;
@@ -85,7 +85,7 @@ export const createAsyncReviewsMovie = createAsyncThunk(
     console.log(params);
     try {
       const response = await axios.post(
-        `http://notflixtv.herokuapp.com/api/v1/reviews/${params.id}/create`,
+        `https://notflixtv.herokuapp.com/api/v1/reviews/${params.id}/create`,
         params.data,
         {
           headers: {
