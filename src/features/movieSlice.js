@@ -3,10 +3,10 @@ import axios from "axios";
 
 export const fetchAsyncMovies = createAsyncThunk(
   "movies/fetchAsyncMovies",
-  async ({ page, limit }) => {
+  async ({ page, limit, search }) => {
     try {
       const response = await axios.get(
-        `http://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}`
+        `http://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&search=${search}`
       );
       // console.log(response.data.data.docs);
       console.log(response);

@@ -43,7 +43,7 @@ const MovieHome = () => {
   // const [genre, setGenre] = useState("All");
 
   useEffect(() => {
-    dispatch(fetchAsyncMovies({ page: 1, limit: 12 }));
+    dispatch(fetchAsyncMovies({ page: 1, limit: 12, search: "" }));
     dispatch(fetchAsyncMoviesGenre());
     dispatch(setSearchMovie(null));
   }, [dispatch]);
@@ -173,6 +173,7 @@ const MovieHome = () => {
                       fetchAsyncMovies({
                         page: e.target.innerHTML,
                         limit: 12,
+                        search: " ",
                       })
                     );
                     console.log(genre);
