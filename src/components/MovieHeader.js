@@ -23,7 +23,7 @@ const MovieHeader = () => {
               In a time when monsters walk the Earth, humanity’s fight for its
               future sets Godzilla and <br /> Kong on a collision course that
               will see the two most powerful forces of nature on the <br />{" "}
-              planet collide in a spectacular battle for the ages.
+              planet collide in a spectacular battle for the agess.
             </p>
             <button className="my-button py-3">Watch Trailer</button>
           </Col>

@@ -137,7 +137,12 @@ const movieSlice = createSlice({
     },
     [fetchAsyncMovies.fulfilled]: (state, { payload }) => {
       state.status = "success";
-      if (payload.docs !== undefined && payload.totalPages !== undefined) {
+      if (
+        payload.docs !== undefined &&
+        typeof payload.docs !== "undefined" &&
+        payload.totalPages !== undefined &&
+        typeof payload.totalPages !== "undefined"
+      ) {
         state.movies = payload.docs;
         state.totalPages = payload.totalPages;
       }
