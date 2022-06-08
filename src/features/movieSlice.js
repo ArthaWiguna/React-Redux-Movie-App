@@ -9,7 +9,7 @@ export const fetchAsyncMovies = createAsyncThunk(
         `https://notflixtv.herokuapp.com/api/v1/movies?page=${page}&limit=${limit}&search=${search}`
       );
       // console.log(response.data.data.docs);
-      console.log(response);
+      console.log(response, "fetchAsyncMovies");
       return response.data.data;
     } catch (error) {
       console.log(error.message);

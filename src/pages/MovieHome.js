@@ -68,6 +68,12 @@ const MovieHome = () => {
     );
   }
 
+  // const tesClick = () => {
+  //   console.log("test click");
+  // };
+
+  console.log(movies);
+
   return (
     <div>
       <MovieNavbar />
@@ -176,7 +182,6 @@ const MovieHome = () => {
                         search: " ",
                       })
                     );
-                    console.log(genre);
                   }}
                 >
                   {items}
