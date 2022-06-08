@@ -61,4 +61,7 @@
     width: 100% !important;
     color: #292929;
   }
+  .navbar .navbar-collapse .dropdown .dropdown-menu a:focus {
+    background-color: #fff;
+  }
 }
