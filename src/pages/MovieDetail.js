@@ -10,16 +10,23 @@ import "../style/MovieDetail.css";
 import MovieNavbar from "../components/MovieNavbar";
 import Footer from "../components/Footer";
 import ModalReview from "../components/ModalReview";
-// import Skeleton from "react-loading-skeleton";
+import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { SkeletonCard } from "../components/SkeletonCard";
 
-import { fetchAsyncDetailMovie, getDetailMovie } from "../features/movieSlice";
+import {
+  fetchAsyncDetailMovie,
+  getDetailMovie,
+  getStatus,
+} from "../features/movieSlice";
 import { Container } from "react-bootstrap";
 
 const MovieDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const detail = useSelector(getDetailMovie);
+  const status = useSelector(getStatus);
+  console.log(status, "status");
 
   // modal
   const [modalShow, setModalShow] = useState(false);
@@ -34,73 +41,87 @@ const MovieDetail = () => {
       <Container>
         <MovieNavbar />
       </Container>
-      <div className="wide-wrapper mt-4">
-        <Container className="wrapper-detail d-sm-flex justify-content-between gap-0 p-3 flex-row mx-auto">
-          <div className="wrapper-poster">
-            <h1 className="title text-white fw-bold d-sm-none">
-              {detail.title}
-            </h1>
-            <img
-              alt="poster"
-              src={`https://image.tmdb.org/t/p/original/${detail.poster}`}
-              className="poster"
-            />
-          </div>
-          <div className="desc-detail position-relative me-auto w-100">
-            <h1 className="title text-white fw-bold d-none d-sm-block">
-              {detail.title}
-            </h1>
-            <div className="d-flex gap-2 mt-3 mt-sm-0 w-100 flex-wrap">
-              {detail.genres &&
-                detail.genres.map((item) => (
-                  <p className="genre px-2 py-1 ">{item}</p>
-                ))}
-            </div>
-            <button className="my-button py-3 fw-bold mt-2 d-block w-100 d-sm-none">
-              Watch Trailer
-            </button>
-            <div className="d-flex rating-detail px-3 justify-content-start mt-4 mb-2">
+      {status === "loading" ? (
+        <SkeletonCard />
+      ) : (
+        <div className="wide-wrapper mt-4">
+          <Container className="wrapper-detail d-sm-flex justify-content-between gap-0 p-3 flex-row mx-auto">
+            <div className="wrapper-poster">
+              <h1 className="title text-white fw-bold d-sm-none">
+                {detail.title || <Skeleton />}
+              </h1>
               <img
-                alt=""
-                src={rating}
-                width="80"
-                height="16"
-                className="star-detail position-absolute start-0"
+                alt="poster"
+                src={`https://image.tmdb.org/t/p/original/${detail.poster}`}
+                className="poster"
               />
-              <p
-                className="value-rating-detail fw-bold ms-2 "
-                style={{ marginTop: "-3px", color: "#bbbbbb" }}
-              >
-                {" "}
-                4.9 / 5
-              </p>
             </div>
-            <h4 className="overview text-white">Overview</h4>
-            <p className="synopsis">{detail.synopsis}</p>
-            <h4 className="actor-title text-white">Main Actors</h4>
-            <div className="actors-name d-flex gap-4 mt-3 w-100 flex-wrap">
-              {detail.casts &&
-                detail.casts.slice(0, 4).map((item) => (
-                  <div>
-                    <img
-                      alt=""
-                      src={`https://image.tmdb.org/t/p/original/${item.profile_path}`}
-                      width="60"
-                      height="62"
-                      className="star-detail d-block text-center m-auto rounded-circle"
-                    />{" "}
-                    <p className="text-white" style={{ fontSize: "14px" }}>
-                      {item.name}
-                    </p>
-                  </div>
-                ))}
+            <div className="desc-detail position-relative me-auto w-100">
+              <h1 className="title text-white fw-bold d-none d-sm-block">
+                {status === "loading" ? (
+                  <Skeleton
+                    baseColor="#313131"
+                    highlightColor="#525252"
+                    borderRadius={0}
+                    width={240}
+                    height={26}
+                  />
+                ) : (
+                  detail.title
+                )}
+              </h1>
+              <div className="d-flex gap-2 mt-3 mt-sm-0 w-100 flex-wrap">
+                {detail.genres &&
+                  detail.genres.map((item) => (
+                    <p className="genre px-2 py-1 ">{item}</p>
+                  ))}
+              </div>
+              <button className="my-button py-3 fw-bold mt-2 d-block w-100 d-sm-none">
+                Watch Trailer
+              </button>
+              <div className="d-flex rating-detail px-3 justify-content-start mt-4 mb-2">
+                <img
+                  alt=""
+                  src={rating}
+                  width="80"
+                  height="16"
+                  className="star-detail position-absolute start-0"
+                />
+                <p
+                  className="value-rating-detail fw-bold ms-2 "
+                  style={{ marginTop: "-3px", color: "#bbbbbb" }}
+                >
+                  {" "}
+                  4.9 / 5
+                </p>
+              </div>
+              <h4 className="overview text-white">Overview</h4>
+              <p className="synopsis">{detail.synopsis}</p>
+              <h4 className="actor-title text-white">Main Actors</h4>
+              <div className="actors-name d-flex gap-4 mt-3 w-100 flex-wrap">
+                {detail.casts &&
+                  detail.casts.slice(0, 4).map((item) => (
+                    <div>
+                      <img
+                        alt=""
+                        src={`https://image.tmdb.org/t/p/original/${item.profile_path}`}
+                        width="60"
+                        height="62"
+                        className="star-detail d-block text-center m-auto rounded-circle"
+                      />{" "}
+                      <p className="text-white" style={{ fontSize: "14px" }}>
+                        {item.name}
+                      </p>
+                    </div>
+                  ))}
+              </div>
+              <button className="my-button py-3 fw-bold mt-2 d-none d-sm-block">
+                Watch Trailer
+              </button>
             </div>
-            <button className="my-button py-3 fw-bold mt-2 d-none d-sm-block">
-              Watch Trailer
-            </button>
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
+      )}
       <Container className="px-5">
         <div className="wrapper-reviews">
           <div className="header-reviews d-sm-flex justify-content-between">

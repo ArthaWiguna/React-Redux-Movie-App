@@ -1,9 +1,12 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { Col } from "react-bootstrap";
 import rating from "../asset/StarFill.svg";
 import "../style/MovieCard.css";
 import plus from "../asset/plus.svg";
 import play from "../asset/play-trailer.svg";
+import logo from "../asset/logo.png";
 import { Link } from "react-router-dom";
 
 const MovieCard = (props) => {
@@ -12,10 +15,12 @@ const MovieCard = (props) => {
     <Col md="3">
       <div className="card-wrapper mb-4">
         <Link className="link" to={{ pathname: `MovieDetail/${movie._id}` }}>
-          <img
+          <LazyLoadImage
             alt="poster"
             src={`https://image.tmdb.org/t/p/original/${movie.poster}`}
-            className="poster w-100"
+            className="poster"
+            effect="blur"
+            placeholderSrc={logo}
           />
         </Link>
         {/* <a href="/">

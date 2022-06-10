@@ -1,7 +1,7 @@
 .card-wrapper {
   background-color: #292929;
   /* position: relative; */
-  width: 280px;
+  width: 260px;
   display: block;
   position: relative;
   overflow: hidden;
@@ -9,13 +9,13 @@
 }
 
 .card-wrapper .poster {
-  width: 100%;
+  max-width: 100% !important;
   height: 400px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  -moz-transition: all 0.5s ease-in-out !important;
+  -o-transition: all 0.5s ease-in-out !important;
+  -ms-transition: all 0.5s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
 }
 
 .card-wrapper:hover .poster {
